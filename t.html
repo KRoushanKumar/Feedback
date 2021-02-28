@@ -1,0 +1,55 @@
+<html>
+<head>
+    <script>
+        function fun() {
+            var name = document.getElementById("Name").value;
+            var midn = document.getElementById("mid").value;
+            var last = document.getElementById("last").value;
+            var Gender = document.querySelector('input[name="gender"]:checked').value;
+            var texta = "";
+            texta = document.getElementById("Print").value;
+            var fullname;
+            if (midn.trim() =="")
+                fullname = name.trim() +" " + last.trim();
+            else
+                fullname = name.trim() +" "+ midn.trim() +" "+ last.trim();
+
+            texta =texta + fullname;
+            document.getElementById("Print").value = texta;
+
+            
+
+            if (fullname.length > 40)
+                alert("length is greater than 40");
+            else
+                alert("length is lessthan 40");
+            //alert(name);
+        }
+    </script>
+</head>
+<body>
+    <header></header>
+    
+    <div style="display:flex">
+        <div>
+            <div style="background-color:black;color:wheat;width:30%;height:200px">
+                <div style="width:200px;"><label for="fname">Gender</label></div>
+                <div style="width:200px;">
+                    <input type="radio" id="male" name="gender" value="Mr" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Ms" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="background-color:red ;width:70%;height:200px ">
+                world
+            </div>
+        </div>
+    </div>
+    
+    <footer></footer>
+</body>
+
+</html>
